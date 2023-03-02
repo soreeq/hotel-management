@@ -1,0 +1,98 @@
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+.bg-image {
+    background-image: url(background.jpg);
+    background-position: absolute;
+    background-size: cover;
+    padding-left: 0;
+    padding-right: 0;  
+    height: 100vh;
+    width: 100vw;
+}
+#logo {
+    border: 5px ridge grey;
+    margin-left: auto;
+    margin-right: auto;
+}
+label {
+    color: #007bff !important;
+}
+.navbar {
+    background-color: #1d1d1b;
+    color: #c59a25;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color:  #c59a25;
+}
+a {
+    color: #c59a25;
+}
+a:hover {
+    color: gold !important;
+}
+.navbar-collapse {
+    font-size: x-large;
+
+}
+.navbar-dark .navbar-nav .active .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show.nav-link{
+    color: #c59a25;
+}
+.navbar-dark .navbar-toggler {
+    color: gold !important;
+    border-color: #c59a25 !important;
+}
+box-width {
+    width: 20%;
+}
+box-header {
+    font-size: medium;
+    text-align: center;
+}
+box-content {
+    font-size: 2;
+}
+.table {
+    border: #1d1d1b 2px;
+}
+label {
+    color: #212529 !important;
+}
+.navbar-brand{
+    margin-left: 50px;
+}
+body {
+    overflow: hidden; /* Hide scrollbars */
+    background: cover;
+}
+.alert {
+    padding: 0 0 0 0;
+}
+.scrollable {
+    height: 333px;
+}
+table {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+thead {
+    flex: 0 0 auto;
+}
+
+tbody {
+    flex: 1 1 auto;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}

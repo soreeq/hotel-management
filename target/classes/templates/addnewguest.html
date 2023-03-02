@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Hotel Management System</title>
+    <!-- Favicon -->
+      <link rel="icon" href="img/favicon-96x96.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+    <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container no-padding">
+        <div class="bg-image">
+
+
+            <nav class="navbar navbar-dark navbar-custom navbar-expand-sm no-padding" style="color: gold;">
+
+                <a href="/" class="navbar-brand col-4 mx-4"><img class="d-inline block align-top" src="img/logodashboard.png" width="300"></a>
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"><span class="navbar-toggler-icon" style="color:gold;"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link mx-4">Panel recepcjonisty</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a href="/reservations" class="nav-link mx-4">Rezerwacje</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a href="/guests" class="nav-link mx-4">Klienci</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a href="/rooms" class="nav-link mx-4">Pokoje</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a href="/logout" class="nav-link mx-4">Wyloguj się</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col-12 my-3"></div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 h5 d-flex justify-content-center jumbotron rounded-2" style="background-color: rgba(255, 255, 255, 0.8);
+            color: #212529; font-size:x-large;"> Wprowadź dane nowego gościa hotelu</div></div>
+            <div class="row mx-auto col-6 d-flex justify-content-center p-3 rounded-2 " style="background-color: rgba(255, 255, 255, 0.8);
+            color: #212529;">
+            <form th:action="@{/add-guest}" th:object="${newGuest}" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="firstName">Pierwsze imię: </label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Wpisz imię..." th:field="${newGuest.firstname}"></input>
+                    </div>
+        
+                    <div class="form-group col-md-4">
+                        <label for="middlename">Drugie imię: </label>
+                        <input type="text" class="form-control" id="middlename" placeholder="Wpisz drugie imie..." th:field="${newGuest.middlename}"></input>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="lastName">Nazwisko: </label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Wpisz nazwisko..." th:field="${newGuest.lastname}"></input>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="phonenumber">Numer telefonu: </label>
+                        <input type="text" class="form-control" id="phonenumber" placeholder="Wpisz numer telefonu..." th:field="${newGuest.phonenumber}"></input>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="email">E-mail: </label>
+                        <input type="text" class="form-control" id="email" placeholder="Wpisz e-mail..." th:field="${newGuest.email}"></input>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="address">Adres: </label>
+                        <input type="text" class="form-control" id="address" placeholder="Wpisz adres..." th:field="${newGuest.address}"></input>
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label for="notes">Dodatkowe informacje: </label>
+                    <input type="text" class="form-control" id="notes" placeholder="Wpisz notatki..." th:field="${newGuest.notes}"></input>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <span style="color: red; text-align:center; margin-left:auto; margin-right:auto;"><div th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></div></span>
+<!--                    <span style="color: red; text-align:center; margin-left:auto; margin-right:auto;"><div th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></div></span>
+                    <span style="color: red; text-align:center; margin-left:auto; margin-right:auto;"><div th:if="${#fields.hasErrors('middlename')}" th:errors="*{middlename}"></div></span>
+                    <span style="color: red; text-align:center; margin-left:auto; margin-right:auto;"><div th:if="${#fields.hasErrors('phonenumber')}" th:errors="*{phonenumber}"></div></span>
+                    <span style="color: red; text-align:center; margin-left:auto; margin-right:auto;"><div th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></div></span>
+                    <span style="color: red; text-align:center; margin-left:auto; margin-right:auto;"><div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div></span>-->
+                </div>
+                <div class="form-row">
+                        <button type="submit" class="btn col-4 mx-auto btn-warning align-self-center" style="height: 50%";>Zarejestruj klienta</button>
+                </div>
+                
+            </form>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

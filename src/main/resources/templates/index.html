@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Hotel Management System</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-96x96.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+    <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container no-padding">
+        <div class="bg-image">
+
+            <nav class="navbar navbar-dark navbar-custom navbar-expand-sm no-padding" style="color: gold;">
+
+                <a 
+                href="/" class="navbar-brand col-4 mx-4"><img class="d-inline block align-top" src="img/logodashboard.png" width="300"></a>
+                <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon" style="color:gold;"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a href="/" class="nav-link mx-4">Panel recepcjonisty</a>
+                    </li>
+                  
+                    <li class="nav-item active">
+                      <a href="/reservations" class="nav-link mx-4">Rezerwacje</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                      <a href="/guests" class="nav-link mx-4">Klienci</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                      <a href="/rooms" class="nav-link mx-4">Pokoje</a>
+                    </li>
+
+                    <li class="nav-item active">
+                      <a href="/logout" class="nav-link mx-4">Wyloguj się</a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+            <div class="col-12 my-3"></div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 h5 d-flex justify-content-center jumbotron rounded-2" style="background-color: rgba(255, 255, 255, 0.8);
+            color: #212529; font-size:x-large;"> Wybierz dostępną opcje z poniższych
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="col-12 my-3"></div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 mx-5 p-5" style="background-color: rgba(255, 255, 255, 0.8);text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+              <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"/>
+            </svg> <br><br> <p class="box-header">Dodaj nowego gościa hotelu</p><br><a href="/add-guest"><button class="btn btn-warning">Dodaj klienta</button></a></div>
+            
+            <div class="col-md-2 mx-5 p-5" style="background-color: rgba(255, 255, 255, 0.8);text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+              <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+            </svg> <br><br> <p class="box-header">Dodaj nową rezerwacje pokoju</p><br><a href="/add-reservation"><button class="btn btn-warning">Dodaj rezerwacje</button></a></div>
+            
+            <div class="col-md-2 mx-5  p-5" style="background-color: rgba(255, 255, 255, 0.8);text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+              <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+              <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+            </svg><br><br> <p class="box-header">Sprawdź obecne rezerwacje i pokoje</p><br><a href="/rooms"><button class="btn btn-warning">Sprawdź pokoje</button></a></div>
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
